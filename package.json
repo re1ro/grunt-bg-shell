@@ -1,6 +1,6 @@
 {
   "name": "grunt-bg-shell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Kiryl Yermakou <rma4ok@gmail.com>",
 
   "repository": {
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "coffee-script": "1.4.0",
-    "grunt": "0.3.17"
+    "grunt": "0.3.17",
+    "grunt-bg-shell": "1.0.1"
   }
 }

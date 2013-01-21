@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
   "use strict";
 
-  require('./tasks/bg-shell')(grunt);
+  grunt.loadNpmTasks('grunt-bg-shell');
 
 
   grunt.initConfig({
@@ -27,6 +27,5 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('default', 'bgShell:coffeeWatch');
-
 
 };
