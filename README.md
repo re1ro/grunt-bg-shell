@@ -1,4 +1,4 @@
 grunt-shelly
 ============
 
-Better shell commands for grunt
+Better shell commands for grunt. Background/parallel run

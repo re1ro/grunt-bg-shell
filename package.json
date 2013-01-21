@@ -1,0 +1,30 @@
+{
+  "name": "grunt-shelly",
+  "version": "1.0.0",
+  "author": "Kiryl Yermakou <rma4ok@gmail.com>",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rma4ok/grunt-shelly.git"
+  },
+
+  "description": "Better shell commands for grunt. Background/parallel run",
+  "keywords": [
+    "gruntplugin",
+    "grunt",
+    "shell",
+    "shelly",
+    "async",
+    "command",
+    "cmd",
+    "exec"
+  ],
+
+  "main": "./tasks/shelly.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coffee-script": "1.4.0",
+    "grunt": "0.3.17"
+  }
+}

@@ -12,3 +12,9 @@ logs
 results
 
 npm-debug.log
+
+# node
+node_modules
+
+# WebStorm
+.idea
