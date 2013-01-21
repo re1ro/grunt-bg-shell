@@ -83,3 +83,16 @@ bgShell: {
   },
 }
 ```
+
+# Developing
+
+You need to install grunt globally:
+```sh
+$ npm i -g grunt
+```
+
+* Watch coffee:
+
+```sh
+$ grunt
+```
