@@ -1,11 +1,11 @@
 module.exports = function (grunt) {
   "use strict";
 
-  require('./tasks/shelly.js')(grunt);
+  require('./tasks/bg-shell')(grunt);
 
 
   grunt.initConfig({
-    shelly: {
+    bgShell: {
       _defaults: {
         execOpts: null,
         stdout: true,
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('default', 'shelly:coffeeWatch');
+  grunt.registerTask('default', 'bgShell:coffeeWatch');
 
 
 };

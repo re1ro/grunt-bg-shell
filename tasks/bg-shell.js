@@ -16,9 +16,9 @@ module.exports = function(grunt) {
     fail: false,
     done: noop
   };
-  grunt.registerMultiTask('shelly', 'Run shell commands', function() {
+  grunt.registerMultiTask('bgShell', 'Run shell commands', function() {
     var childProcess, data, failOnError, stderr, stderrHandler, stdout, stdoutHandler, taskDone;
-    data = _.defaults(this.data, grunt.config.get('shelly')._defaults, defaults);
+    data = _.defaults(this.data, grunt.config.get('bgShell')._defaults, defaults);
     stdout = data.stdout;
     stderr = data.stderr;
     taskDone = !data.bg ? this.async() : noop;

@@ -1,11 +1,11 @@
 {
-  "name": "grunt-shelly",
+  "name": "grunt-bg-shell",
   "version": "1.0.0",
   "author": "Kiryl Yermakou <rma4ok@gmail.com>",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/rma4ok/grunt-shelly.git"
+    "url": "https://github.com/rma4ok/grunt-bg-shell.git"
   },
 
   "description": "Better shell commands for grunt. Background/parallel run",
@@ -20,7 +20,7 @@
     "exec"
   ],
 
-  "main": "./tasks/shelly.js",
+  "main": "./tasks/bg-shell.js",
   "dependencies": {
   },
   "devDependencies": {

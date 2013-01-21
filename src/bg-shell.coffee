@@ -16,8 +16,8 @@ module.exports = (grunt)->
     fail: false
     done: noop
 
-  grunt.registerMultiTask 'shelly', 'Run shell commands', ->
-    data = _.defaults @data, grunt.config.get('shelly')._defaults, defaults
+  grunt.registerMultiTask 'bgShell', 'Run shell commands', ->
+    data = _.defaults @data, grunt.config.get('bgShell')._defaults, defaults
 
     stdout = data.stdout
     stderr = data.stderr
