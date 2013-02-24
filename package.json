@@ -1,7 +1,7 @@
 {
   "name": "grunt-bg-shell",
   "description": "Better shell commands for grunt. Background/parallel run",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": {
     "name": "rma4ok",
     "email": "rma4ok@gmail.com"
@@ -25,13 +25,14 @@
     "gruntplugin",
     "grunt",
     "shell",
+    "command",
+    "cmd",
+    "exec",
+    "bash",
     "bg",
     "background",
     "job",
-    "async",
-    "command",
-    "cmd",
-    "exec"
+    "async"
   ],
 
   "main": "Gruntfile.js",
