@@ -1,14 +1,26 @@
 {
   "name": "grunt-bg-shell",
-  "version": "1.0.2",
-  "author": "Kiryl Yermakou <rma4ok@gmail.com>",
+  "description": "Better shell commands for grunt. Background/parallel run",
+  "version": "2.0.0",
+  "author": {
+    "name": "rma4ok",
+    "email": "rma4ok@gmail.com"
+  },
 
   "repository": {
     "type": "git",
     "url": "https://github.com/rma4ok/grunt-bg-shell.git"
   },
+  "bugs": {
+    "url": "https://github.com/rma4ok/grunt-bg-shell/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/rma4ok/grunt-bg-shell/blob/master/LICENSE-MIT"
+    }
+  ],
 
-  "description": "Better shell commands for grunt. Background/parallel run",
   "keywords": [
     "gruntplugin",
     "grunt",
@@ -22,12 +34,17 @@
     "exec"
   ],
 
-  "main": "./tasks/bg-shell.js",
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+
   "dependencies": {
   },
   "devDependencies": {
-    "coffee-script": "1.4.0",
-    "grunt": "0.3.17",
-    "grunt-bg-shell": "1.0.1"
+    "grunt": "~0.4.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
   }
 }
