@@ -1,22 +1,24 @@
 grunt-bg-shell
 ============
 
-Better shell commands for [grunt](https://github.com/gruntjs/grunt). Background/parallel run
-
-If you want to run `compass watch`, `coffee --watch --output lib/ src/` and `forever server.js` at the same time.
-
+Improve your workflow by running commands in the background and in parallel using [Grunt](https://github.com/gruntjs/grunt). 
 
 ## Getting Started
-This plugin requires Grunt `~0.4.0`
+*Note: This plugin requires Grunt `~0.4.0`*
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-$ npm i grunt-bg-shell --save-dev
+npm install grunt-bg-shell --save-dev
+```
+Then add the task to your `Gruntfile.js` with this line:
+```js
+grunt.loadNpmTasks('grunt-bg-shell');
 ```
 
+## Sample Usage
 
-# Using
+For example, say you want to run your node server and also compile coffeescript and sass/scss files all in the same terminal. You could acheive that with the following config:
 
 ```javascript
 module.exports = function (grunt) {
@@ -39,16 +41,11 @@ module.exports = function (grunt) {
     }
   });
   
-  
   grunt.registerTask('default', 'bgShell:watchCompass bgShell:watchCoffee bgShell:runNode');
 };
 ```
-# Important!
-In example above all shell commands go to background. But not the last one. 
-We tell grunt to run till `bgShell:runNode` runs 
 
-
-# Options
+## Available Options
 ```javascript
 bgShell: {
   lsTasks: {
@@ -73,7 +70,7 @@ bgShell: {
 * ```fail```: fail grunt on error
 * ```done```: callback after execution ```function(err, stdout, stderr){}```
  
-# Override defaults
+## Default Options
 ```javascript
 bgShell: {
   _defaults: {
