@@ -9,7 +9,8 @@ module.exports = (grunt)->
   noop = -> return
 
   defaults =
-    execOpts: null
+    execOpts: 
+      maxBuffer: 200*1024
     stdout: true
     stderr: true
     bg: false
@@ -57,7 +58,7 @@ module.exports = (grunt)->
     else
       failOnError
 
-
+    console.log(config.cmd, config.execOpts); 
     childProcess = exec(config.cmd, config.execOpts, (err, stdout, stderr) ->
       config.done(err, stdout, stderr);
       stderrHandler err if err
