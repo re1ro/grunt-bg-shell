@@ -9,7 +9,8 @@ module.exports = (grunt)->
   noop = -> return
 
   defaults =
-    execOpts: null
+    execOpts: 
+      maxBuffer: 200*1024
     stdout: true
     stderr: true
     bg: false
