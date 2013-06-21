@@ -58,7 +58,6 @@ module.exports = (grunt)->
     else
       failOnError
 
-    console.log(config.cmd, config.execOpts); 
     childProcess = exec(config.cmd, config.execOpts, (err, stdout, stderr) ->
       config.done(err, stdout, stderr);
       stderrHandler err if err
