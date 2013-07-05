@@ -49,7 +49,7 @@ module.exports = function (grunt) {
 ```javascript
 bgShell: {
   lsTasks: {
-    cmd: 'ls -la',
+    cmd: 'ls -la', // or function(){return 'ls -la'}
     execOpts: {
       cwd: './tasks'
     },
@@ -61,14 +61,14 @@ bgShell: {
   }     
 }
 ```
-* ```cmd```: command to execute or ```function(){}``` that returns a command to execute
-* ```execOpts```: options for 
-  [```child_process.exec```](http://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback)
-* ```stdout```: ```true```, ```false``` or ```function(out){}```
-* ```stderr```: ```true```, ```false``` or ```function(err){}```
-* ```bg```: background execution
-* ```fail```: fail grunt on error
-* ```done```: callback after execution ```function(err, stdout, stderr){}```
+* `cmd`: command to execute or `function(){}` that returns a command to execute
+* `execOpts`: options for 
+  [`child_process.exec`](http://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback)
+* `stdout`: `true`, `false` or `function(out){}`
+* `stderr`: `true`, `false` or `function(err){}`
+* `bg`: background execution
+* `fail`: fail grunt on error
+* `done`: callback after execution `function(err, stdout, stderr){}`
  
 ## Default Options
 ```javascript
