@@ -19,6 +19,9 @@ module.exports = (grunt)->
   grunt.registerMultiTask 'bgShell', 'Run shell commands', ->
     config = _.defaults @data, grunt.config.get('bgShell')._defaults, defaults
 
+    command = config.cmd
+    command = command() if _.isFunction(command)
+
     stdout = config.stdout
     stderr = config.stderr
 
@@ -56,11 +59,6 @@ module.exports = (grunt)->
         return
     else
       failOnError
-
-    command = if _.isFunction(config.cmd)
-      config.cmd()
-    else
-      config.cmd
 
     childProcess = exec(command, config.execOpts, (err, stdout, stderr) ->
       config.done(err, stdout, stderr);
