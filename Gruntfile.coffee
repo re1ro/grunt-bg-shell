@@ -20,5 +20,8 @@ module.exports = (grunt) ->
           cmd: 'ls -la'
           bg: false
 
+        testFunction:
+          cmd: -> 'ls'
+
 
   grunt.registerTask 'default', 'bgShell'

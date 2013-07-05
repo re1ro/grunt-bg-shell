@@ -57,8 +57,12 @@ module.exports = (grunt)->
     else
       failOnError
 
+    command = if _.isFunction(config.cmd)
+      config.cmd()
+    else
+      config.cmd
 
-    childProcess = exec(config.cmd, config.execOpts, (err, stdout, stderr) ->
+    childProcess = exec(command, config.execOpts, (err, stdout, stderr) ->
       config.done(err, stdout, stderr);
       stderrHandler err if err
       taskDone()
