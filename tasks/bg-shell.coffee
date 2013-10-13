@@ -6,7 +6,7 @@ module.exports = (grunt)->
   log = grunt.log
   _ = grunt.util._
 
-  noop = -> return
+  noop = ->
 
   defaults =
     execOpts: null
@@ -40,30 +40,20 @@ module.exports = (grunt)->
     else
       noop
 
-    failOnError = if config.fail
+    stderrHandler = if _.isFunction(stderr)
+      stderr
+    else if stderr
       (err)->
-        grunt.fatal err
+        log.error err
         return
     else
       noop
 
-    stderrHandler = if _.isFunction(stderr)
-      (err)->
-        stderr err
-        failOnError err
-        return
-    else if stderr
-      (err)->
-        log.error err
-        failOnError err
-        return
-    else
-      failOnError
-
     childProcess = exec(command, config.execOpts, (err, stdout, stderr) ->
-      config.done(err, stdout, stderr);
-      stderrHandler err if err
+      config.done(err, stdout, stderr)
+      grunt.fatal err if err
       taskDone()
+      return
     )
 
     childProcess.stdout.on 'data', stdoutHandler
