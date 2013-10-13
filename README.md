@@ -63,18 +63,20 @@ bgShell: {
 ```
 * `cmd`: command to execute or `function(){}` that returns a command to execute
 * `execOpts`: options for 
-  [`child_process.exec`](http://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback)
+  [`child_process.exec`](http://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback).
+  If `execOpts.maxBuffer` set to `false`, `0`, `NaN` or `Infinite` it won't buffer stdout and stderr for `done` callback
 * `stdout`: `true`, `false` or `function(out){}`
 * `stderr`: `true`, `false` or `function(err){}`
 * `bg`: background execution
 * `fail`: fail grunt on error
 * `done`: callback after execution `function(err, stdout, stderr){}`
- 
+
+
 ## Default Options
 ```javascript
 bgShell: {
   _defaults: {
-    execOpts: null,
+    execOpts: {},
     stdout: true,
     stderr: true,
     bg: false,
@@ -82,5 +84,35 @@ bgShell: {
     done: function (err, stdout, stderr) {
     }
   },
+}
+```
+
+## Troubleshooting
+
+If you get
+```
+Error: stdout maxBuffer exceeded
+```
+You should set `execOpts.maxBuffer` to `false`. But you won't get stdout and strerr in `done` callback
+
+Example:
+```javascript
+bgShell: {
+  lsTasks: {
+    cmd: 'ls -la',
+    execOpts: {
+      maxBuffer: false
+    },
+    stdout: function(chunk){
+      // process your stdout chunk
+    },
+    stderr: function(chunk){
+      // process your stderr chunk
+    },
+    done: function (err, stdout, stderr) {
+      // stdout === null
+      // stderr === null
+    }
+  }
 }
 ```

@@ -1,7 +1,7 @@
+execCmd = require('./child-process').execCmd
+
 module.exports = (grunt)->
   'use strict'
-
-  exec = require('child_process').exec
 
   log = grunt.log
   _ = grunt.util._
@@ -9,7 +9,7 @@ module.exports = (grunt)->
   noop = ->
 
   defaults =
-    execOpts: null
+    execOpts: {}
     stdout: true
     stderr: true
     bg: false
@@ -49,7 +49,7 @@ module.exports = (grunt)->
     else
       noop
 
-    childProcess = exec(command, config.execOpts, (err, stdout, stderr) ->
+    childProcess = execCmd(command, config.execOpts, (err, stdout, stderr) ->
       config.done(err, stdout, stderr)
       grunt.fatal err if err
       taskDone()
