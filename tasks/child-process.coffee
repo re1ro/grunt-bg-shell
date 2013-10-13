@@ -3,13 +3,16 @@ spawn = require('child_process').spawn
 
 
 exports.execCmd = (command, options, callback)->
-  util._extend options,
+  util._extend(
     encoding: "utf8"
     timeout: 0
     maxBuffer: 200 * 1024
     killSignal: "SIGTERM"
     cwd: null
     env: null
+  ,
+    options
+  )
 
   unless options.maxBuffer > 0 and isFinite options.maxBuffer
     options.maxBuffer = false
