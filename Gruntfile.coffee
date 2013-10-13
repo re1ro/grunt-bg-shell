@@ -15,10 +15,10 @@ module.exports = (grunt) ->
 
         testAsync:
           cmd: 'ls'
+          bg: true
 
         testSync:
           cmd: 'ls -la'
-          bg: false
 
         testFunction:
           cmd: -> 'ls'

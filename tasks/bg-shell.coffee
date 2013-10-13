@@ -51,7 +51,11 @@ module.exports = (grunt)->
 
     childProcess = execCmd(command, config.execOpts, (err, stdout, stderr) ->
       config.done(err, stdout, stderr)
-      grunt.fatal err if err
+      if err
+        if config.fail
+          grunt.fatal err
+        else
+          stderrHandler err
       taskDone()
       return
     )
