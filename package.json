@@ -1,17 +1,28 @@
 {
   "name": "grunt-bg-shell",
   "description": "Better shell commands for grunt. Background/parallel run",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": {
     "name": "rma4ok",
     "email": "rma4ok@gmail.com"
   },
   "contributors": [
-     {
-       "name": "Matthew Dzaman",
-       "email": "matthew@dzaman.org"
-     }
-   ],
+    {
+      "name": "Matthew Dzaman",
+      "email": "matthew@dzaman.org",
+      "github": "https://github.com/dzaman"
+    },
+    {
+      "name": "Chris Wren",
+      "email": "chris@chrisawren.com",
+      "github": "https://github.com/ChrisWren"
+    },
+    {
+      "name": "Max Brosnahan",
+      "email": "maximilianbrosnahan@gmail.com",
+      "github": "https://github.com/gingermusketeer"
+    }
+  ],
 
   "repository": {
     "type": "git",
