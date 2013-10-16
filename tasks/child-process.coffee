@@ -30,6 +30,7 @@ exports.execCmd = (command, options, callback)->
   child = spawn(file, args,
     cwd: options.cwd
     env: options.env
+    stdio: [process.stdin]
     windowsVerbatimArguments: !!options.windowsVerbatimArguments
   )
 
