@@ -40,8 +40,7 @@ module.exports = function (grunt) {
       }
     }
   });
-  
-  grunt.registerTask('default', 'bgShell:watchCompass bgShell:watchCoffee bgShell:runNode');
+  grunt.registerTask('default', ['bgShell:watchCompass','bgShell:watchCoffee','bgShell:runNode']);
 };
 ```
 
