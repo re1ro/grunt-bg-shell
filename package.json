@@ -1,7 +1,7 @@
 {
   "name": "grunt-bg-shell",
   "description": "Better shell commands for grunt. Background/parallel run",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "author": {
     "name": "rma4ok",
     "email": "rma4ok@gmail.com"
