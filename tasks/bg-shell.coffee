@@ -17,7 +17,7 @@ module.exports = (grunt)->
     done: noop
 
   grunt.registerMultiTask 'bgShell', 'Run shell commands', ->
-    config = _.defaults @data, grunt.config.get('bgShell')._defaults, defaults
+    config = _.defaults @data, grunt.config.getRaw('bgShell')._defaults, defaults
 
     command = config.cmd
     command = command() if _.isFunction(command)
