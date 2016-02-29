@@ -23,7 +23,6 @@
       "github": "https://github.com/gingermusketeer"
     }
   ],
-
   "repository": {
     "type": "git",
     "url": "https://github.com/rma4ok/grunt-bg-shell.git"
@@ -37,7 +36,6 @@
       "url": "https://github.com/rma4ok/grunt-bg-shell/blob/master/LICENSE-MIT"
     }
   ],
-
   "keywords": [
     "gruntplugin",
     "grunt",
@@ -51,18 +49,15 @@
     "job",
     "async"
   ],
-
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
   },
-
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": ">=0.4.0"
   }
 }
